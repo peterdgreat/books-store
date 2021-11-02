@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import BookLists from './components/BookLists';
+import BooksContainer from './components/BooksContainer';
 import Categories from './components/Categories';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <BookLists />
+          <BooksContainer />
         </Route>
         <Route path="/categories">
           <Categories />

@@ -26,7 +26,10 @@ const BookLists = () => {
     <ul>
       {Books.map((book) => (
         <li key={book.id}>
-          {book.title}
+          <span>{book.category}</span>
+          <span>{book.title}</span>
+          <span>{book.author}</span>
+          <button type="button">Remove</button>
         </li>
       ))}
     </ul>
