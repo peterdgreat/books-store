@@ -3,11 +3,6 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
-// require('react-dom');
-// window.React2 = require('react');
-
-// console.log(window.React1 === window.React2);
-
 const Form = () => {
   const dispatch = useDispatch();
   const [book, setBook] = useState();
