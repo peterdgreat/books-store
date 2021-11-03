@@ -10,7 +10,7 @@ window.React2 = require('react');
 console.log(window.React1 === window.React2);
 
 const Form = () => {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const { value: titleValue, onChange: titleOnChange } = useInputHook('');
   const { value: authorValue, onChange: authorOnChange } = useInputHook('');
 
@@ -21,8 +21,8 @@ const Form = () => {
       title: titleValue,
       author: authorValue,
     };
-    console.log(newBook);
     dispatch(addBook(newBook));
+    console.log(newBook);
   };
   return (
     <form>
