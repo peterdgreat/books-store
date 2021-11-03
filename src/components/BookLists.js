@@ -1,39 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-const BookLists = () => {
-  const Books = [
-    {
-      title: 'The Hunger Games',
-      id: 1,
-      author: 'Suzanne Collins',
-      category: 'Action',
-    },
-    {
-      title: 'Dune',
-      id: 2,
-      author: 'Frank Halbert',
-      category: 'Science Fiction',
-    },
-    {
-      title: 'TCapital in the Twenty-First Century',
-      id: 3,
-      author: 'Suzanne Collins',
-      category: 'Economy',
-    },
-  ];
+const BookLists = (props) => {
+  const dispatch = useDispatch();
+  const {
+    title, author, id,
+  } = props;
+
+  const handleRemove = () => {
+    dispatch(removeBook(id));
+  };
 
   return (
-    <ul>
-      {Books.map((book) => (
-        <li key={book.id}>
-          <span>{book.category}</span>
-          <span>{book.title}</span>
-          <span>{book.author}</span>
-          <button type="button">Remove</button>
-        </li>
-      ))}
-    </ul>
+
+    <li key={id}>
+      <span>{title}</span>
+      <span>{author}</span>
+      <button type="button" onClick={handleRemove}>Remove</button>
+    </li>
+
   );
+};
+
+BookLists.propTypes = {
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default BookLists;
