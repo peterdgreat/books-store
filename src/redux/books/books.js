@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const ADD_BOOK = 'bookStore/books/ADD_BOOk';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-
+const GET_BOOKS = 'bookStore/books/GET_BOOKS';
 const APP_ID = 'G6Nd2Pu54IbbPFQeXivx';
 const APP_URL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${APP_ID}/books`;
 
@@ -22,7 +22,7 @@ const postBook = async (payload) => {
     },
     body: JSON.stringify(book),
   });
-  return response.text().then((text) => console.log(text));
+  return response.json();
 };
 
 const deleteBook = async (payload) => {
@@ -41,6 +41,33 @@ export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
 });
+
+export const getBooks = () => async (dispatch) => {
+  const books = [];
+  let keys;
+  let values;
+  await fetch(APP_URL, {
+    method: 'GET',
+  }).then((response) => response.json()).then((data) => {
+    [keys, values] = [Object.keys(data), Object.values(data)];
+    console.log(data);
+  });
+  values.forEach((value, index) => {
+    const book = {
+      id: keys[index],
+      title: value[0].title,
+      category: value[0].category,
+    };
+    books.push(book);
+  });
+  dispatch({
+    type: GET_BOOKS,
+    payload: books,
+  });
+};
+
+// getBooks();
+// getBooks();
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

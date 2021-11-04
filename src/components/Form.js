@@ -11,7 +11,7 @@ const Form = () => {
     const newBook = {
       id: uuidv4(),
       title: book.title,
-      author: book.author,
+      // author: book.author,
       category: book.category,
     };
     dispatch(addBook(newBook));
@@ -28,9 +28,6 @@ const Form = () => {
         <input type="text" className="form-control" name="title" onChange={handleChange} id="title" placeholder="Add your title" />
       </div>
 
-      <div className="input-group mb-3">
-        <input type="text" className="form-control" name="author" onChange={handleChange} id="author" placeholder="Authors name" />
-      </div>
       <div className="input-group mb-3">
         <select className="form-select" id="inputGroupSelect01" name="category" defaultValue="category" onChange={handleChange}>
           <option>category...</option>
