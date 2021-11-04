@@ -12,6 +12,7 @@ const Form = () => {
       id: uuidv4(),
       title: book.title,
       author: book.author,
+      category: book.category,
     };
     dispatch(addBook(newBook));
   };
@@ -22,9 +23,22 @@ const Form = () => {
   };
   return (
     <form>
-      <input type="text" name="title" onChange={handleChange} id="title" placeholder="Add your title" />
-      <br />
-      <input type="text" name="author" onChange={handleChange} id="author" placeholder="Authors name" />
+      <div className="input-group mb-3">
+        <input type="text" className="form-control" name="title" onChange={handleChange} id="title" placeholder="Add your title" />
+      </div>
+
+      <div className="input-group mb-3">
+        <input type="text" className="form-control" name="author" onChange={handleChange} id="author" placeholder="Authors name" />
+      </div>
+      <div className="input-group mb-3">
+        <select className="form-select" id="inputGroupSelect01" name="category" defaultValue="category" onChange={handleChange}>
+          <option>category...</option>
+          <option value="action">Action</option>
+          <option value="science fiction">Science Fiction</option>
+          <option value="economy">Economy</option>
+        </select>
+      </div>
+
       <button type="button" onClick={submitBookToStore}>Add Book</button>
     </form>
   );
