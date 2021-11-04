@@ -15,7 +15,7 @@ const BookLists = (props) => {
 
   return (
 
-    <li key={id}>
+    <li key={id} className="d-flex justify-content-around">
       <span>
         {category}
       </span>

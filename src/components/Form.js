@@ -15,6 +15,7 @@ const Form = () => {
       category: book.category,
     };
     dispatch(addBook(newBook));
+    setBook('');
   };
   const handleChange = (e) => {
     setBook({

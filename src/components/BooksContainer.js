@@ -6,20 +6,22 @@ import Form from './Form';
 const BooksContainer = () => {
   const Books = useSelector((state) => state.booksReducer.books);
   return (
-    <div>
+    <div className="container">
 
-      <ul>
-        {Books.map((book) => (
-          <BookLists
-            key={book.id}
-            id={book.id}
-            author={book.author}
-            title={book.title}
-            category={book.category}
-          />
-        ))}
+      <section className="row">
+        <ul className="col-md-6 ">
+          {Books.map((book) => (
+            <BookLists
+              key={book.id}
+              id={book.id}
+              author={book.author}
+              title={book.title}
+              category={book.category}
+            />
+          ))}
 
-      </ul>
+        </ul>
+      </section>
       <Form />
     </div>
   );
