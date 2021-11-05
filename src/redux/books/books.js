@@ -5,8 +5,8 @@ const APP_URL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 const initialState = {
   books: [],
 };
-export const getBooks = () => (dispatch) => {
-  fetch(APP_URL, {
+export const getBooks = () => async (dispatch) => {
+  await fetch(APP_URL, {
     method: 'GET',
   }).then((response) => response.json()).then((data) => {
     dispatch({
@@ -16,8 +16,8 @@ export const getBooks = () => (dispatch) => {
   });
 };
 
-export const addBook = (payload) => (dispatch) => {
-  fetch(APP_URL, {
+export const addBook = (payload) => async (dispatch) => {
+  await fetch(APP_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,8 +27,8 @@ export const addBook = (payload) => (dispatch) => {
     .then(() => dispatch(getBooks()));
 };
 
-export const removeBook = (payload) => (dispatch) => {
-  fetch(`${APP_URL}/${payload}`, {
+export const removeBook = (payload) => async (dispatch) => {
+  await fetch(`${APP_URL}/${payload}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
