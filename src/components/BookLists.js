@@ -47,7 +47,7 @@ const BookLists = (props) => {
         </div>
 
       </section>
-      <section className="col-md-4 d-flex justify-content-center align-items-center bd-r">
+      <section className="col-md-4 d-flex justify-content-start align-items-center bd-r">
         <CircularProgress variant="determinate" className="prog-h" value={progress} />
         <div className="d-flex flex-column ">
           <span className="r-num">
