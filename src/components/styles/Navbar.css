@@ -5,15 +5,21 @@
 .navbar {
     padding-bottom: 0;
 }
+.bdr {
+    padding-left: 2.65em;
+}
 .nav-Link {
     display: block;
-    padding-left: 2.65em;
     color:#121212;
     text-decoration: none;
     font-family: Montserrat;
    font-size: 0.813rem;
   font-weight: normal;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+ul {
+    padding-left: 0;
 }
 
 .user {
