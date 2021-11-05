@@ -1,0 +1,43 @@
+.bg {
+    background-color: #fff;
+    height: 5.85rem;
+}
+.navbar {
+    padding-bottom: 0;
+}
+.nav-Link {
+    display: block;
+    padding-left: 2.65em;
+    color:#121212;
+    text-decoration: none;
+    font-family: Montserrat;
+   font-size: 0.813rem;
+  font-weight: normal;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.user {
+    color: #0290ff;
+}
+
+.logo {
+    color: #0290ff;
+    font-family: Montserrat;
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+.categories{
+opacity: 0.5;
+}
+
+.circle {
+    width: 100%;
+}
+.user-h {
+    border-radius: 50%;
+    width: 2.813rem;
+    height: 2.813rem;
+    margin-right: 3rem;
+    border: solid 1px #e8e8e8;
+}
