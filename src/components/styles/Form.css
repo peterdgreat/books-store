@@ -1,10 +1,10 @@
 h3 {
-    font-family: Montserrat;
-    font-size: 1.25rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.18px;
-    color: #888;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
