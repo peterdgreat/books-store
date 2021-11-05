@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto');
+
 .bg {
   background-color: #fff;
   height: 5.85rem;
@@ -15,7 +17,7 @@
   display: block;
   color: #121212;
   text-decoration: none;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -31,7 +33,7 @@ ul {
 
 .logo {
   color: #0290ff;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
 }
