@@ -20,7 +20,6 @@ const BookLists = (props) => {
         {category}
       </span>
       <span>{title}</span>
-      {/* <span>{author}</span> */}
       <button type="button" onClick={handleRemove}>Remove</button>
     </li>
 
@@ -30,7 +29,6 @@ const BookLists = (props) => {
 BookLists.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  // author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
 
