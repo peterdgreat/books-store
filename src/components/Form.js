@@ -9,13 +9,11 @@ const Form = () => {
 
   const submitBookToStore = () => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: book.title,
-      // author: book.author,
       category: book.category,
     };
     dispatch(addBook(newBook));
-    setBook('');
   };
   const handleChange = (e) => {
     setBook({
@@ -25,11 +23,11 @@ const Form = () => {
   return (
     <form>
       <div className="input-group mb-3">
-        <input type="text" className="form-control" name="title" onChange={handleChange} id="title" placeholder="Add your title" />
+        <input type="text" className="form-control" name="title" onChange={handleChange} placeholder="Add your title" />
       </div>
 
       <div className="input-group mb-3">
-        <select className="form-select" id="inputGroupSelect01" name="category" defaultValue="category" onChange={handleChange}>
+        <select className="form-select" name="category" defaultValue="category" onChange={handleChange}>
           <option>category...</option>
           <option value="action">Action</option>
           <option value="science fiction">Science Fiction</option>
