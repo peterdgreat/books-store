@@ -6,10 +6,10 @@ import { getBooks } from '../redux/books/books';
 
 const BooksContainer = () => {
   const dispatch = useDispatch();
+  const Books = useSelector((state) => state.booksReducer.books);
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-  const Books = useSelector((state) => state.booksReducer.books);
   return (
     <div>
 
