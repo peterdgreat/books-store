@@ -43,7 +43,7 @@ export const removeBook = (payload) => ({
 });
 
 export const getBooks = () => async (dispatch) => {
-  const books = [];
+  // const books = [];
   let keys;
   let values;
   await fetch(APP_URL, {
@@ -58,11 +58,11 @@ export const getBooks = () => async (dispatch) => {
       title: value[0].title,
       category: value[0].category,
     };
-    books.push(book);
+    initialState.books.push(book);
   });
   dispatch({
     type: GET_BOOKS,
-    payload: books,
+    payload: initialState.books,
   });
 };
 
