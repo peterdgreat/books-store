@@ -59,7 +59,7 @@ const BookLists = (props) => {
           </span>
         </div>
       </section>
-      <section className="col-md-4 d-flex flex-column justify-content-between align-items-start">
+      <section className="col-md-4 d-flex flex-column justify-content-between  ps-5 align-items-start">
 
         <span className="chpt">CURRENT CHAPTER</span>
         <span className="prog-chpt">
