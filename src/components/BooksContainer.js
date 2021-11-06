@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import BookLists from './BookLists';
 import Form from './Form';
 import { getBooks } from '../redux/books/books';
@@ -24,12 +25,15 @@ const BooksContainer = () => {
     )));
   });
   return (
-    <div>
+    <div className="container ps-0 pt-5">
 
-      <ul>
-        {BookList}
+      <div>
+        <ul>
+          {BookList}
 
-      </ul>
+        </ul>
+
+      </div>
       <Form />
     </div>
   );
