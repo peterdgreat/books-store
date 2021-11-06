@@ -25,7 +25,7 @@ const BooksContainer = () => {
     )));
   });
   return (
-    <div className="container pt-5">
+    <div className="container ps-0 pt-5">
 
       <div>
         <ul>
