@@ -24,7 +24,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 * Open terminal
-* Clone this project by command git clone(git@github.com:peterdgreat/books-store.git)
+* Clone this project by command git clone(https://github.com/peterdgreat/books-store.git)
 * Cd books-store
 
 ### install
@@ -42,9 +42,9 @@ npm run start
 
 👤 **Ajayi Peter**
 
-- GitHub: [@githubhandle](https://github.com/peterdgreat)
-- Twitter: [@twitterhandle](https://twitter.com/dev_Peter_O)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/ajayi-peter-4391ab1b5)
+- GitHub: [@peterdgreat](https://github.com/peterdgreat)
+- Twitter: [@dev_peter_O](https://twitter.com/dev_Peter_O)
+- LinkedIn: [ajayipeter](https://www.linkedin.com/in/ajayipeter/)
 
 ## Show your support
 
